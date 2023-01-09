@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head><style>article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{background:#fff;font-family:sans-serif;width:85%;max-width:750px;margin:0 auto;padding:0 25px}h2{font-size:1.75em;text-transform:uppercase}p{font-size:.8125em}.report{border:solid 1px #afafaf;padding:10px;overflow:hidden;background:#f1f1f1}.report legend{position:absolute;left:-999px}.report .col-left{float:left;width:43%}.report .col-right{float:right;width:57%}.report label{padding:10px 15px;display:block;font-size:.75em;font-weight:700;clear:both;vertical-align:top}.report input,.report select{display:block;width:100%;margin-top:5px}.report input{padding:5px}.report button{margin:10px 15px}.report .checkbox span{float:left}.report .checkbox input{float:left;width:auto;margin-left:20px;margin-top:0}.report .pair{overflow:hidden;padding:10px 15px}.report .pair label{width:48%;padding:0;clear:none}.report .pair input{width:90%}.report .pair-left{float:left}.report .pair-right{float:right}.report textarea{width:98%;margin-top:5px}.report button{border:solid 1px #aaa;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;padding:12px 25px;color:#000;float:right}caption{font-size:1.75em;text-transform:uppercase;text-align:left;margin:1em 0 .5em;font-weight:700}thead{background:#f1f1f1}tfoot,th{text-transform:uppercase}tfoot{border-top:solid 1px #f1f1f1}td,th{padding:15px;font-size:.75em}td button{cursor:pointer;display:block;white-space:nowrap}</style>
+    <meta charset="UTF-8" />
+    <title>Frontend test</title>
+  </head>
+  <body>
+    <h1>Time reporting</h1>
+    <form class="report">
+      <div class="col-left">
+        <label>
+          Projekt
+          <select name="project" id="project">
+            <option value="">Choose project...</option>
+            <option value="project1">Projekt 1</option>
+            <option value="project2">Projekt 2</option>
+            <option value="project3">Projekt 3</option>
+          </select>
+        </label>
+        <label>
+          Activity
+          <select name="activity" id="activity">
+            <option value="">Please select an activity...</option>
+            <option value="activity1">Activity 1</option>
+            <option value="activity2">Activity 2</option>
+            <option value="activity3">Activity 3</option>
+          </select>
+        </label>
+        <div class="pair">
+          <label class="pair-left">
+            From
+            <input type="text" name="from" id="from"/>
+          </label>
+          <label class="pair-right">
+            To
+            <input type="text" name="to" id="to"/>
+          </label>
+        </div>
+        <label class="checkbox">
+          <span>Chargeable</span>
+          <input type="checkbox" name="billable" id="billable" />
+        </label>
+      </div>
+      <div class="col-right">
+        <label>
+          Note
+          <textarea name="note" cols="30" rows="10" id="textarea"></textarea>
+        </label>
+        <button type="submit" id="spara">Save</button>
+      </div>
+    </form>
+    <table>
+      <caption>
+        Reported time
+      </caption>
+      <thead>
+        <tr>
+          <th>Projekt</th>
+          <th>Activity</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Note</th>
+          <th colspan="2">Measure</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="7">Total total time: 8:00</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Lorem ipsum</td>
+          <td>Fusce</td>
+          <td>9:00</td>
+          <td>17:00</td>
+          <td>Proin vel iaculis diam.</td>
+          <td><button>Edit</button></td>
+          <td><button>Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <script src='index.js'> </script>
+  </body>
+</html>
